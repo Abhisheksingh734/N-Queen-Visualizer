@@ -12,14 +12,11 @@ let n,
   tempSpeed,
   q,
   Board = 0;
-// Board = 0;
 
-// Creating array for all the possible arrangements of the N-Queen
+// All the possible arrangements of the N-Queen
 let array = [0, 2, 1, 1, 3, 11, 5, 41, 93];
 
-// Used to store the state of the boards;
 let pos = {};
-// let position = {};
 
 // Setting the slider value onSlide
 speed = (100 - slider.value) * 10;
@@ -34,7 +31,6 @@ slider.oninput = function () {
 class Queen {
   constructor() {
     this.position = Object.assign({}, pos);
-    // this.Board = 0;
     this.uuid = [];
   }
 
@@ -112,9 +108,9 @@ class Queen {
       for (let k = 0; k < n; ++k)
         (j + k) & 1
           ? (row.getElementsByTagName("td")[k].style.backgroundColor =
-              "#FF9F1C")
+              "#779556")
           : (row.getElementsByTagName("td")[k].style.backgroundColor =
-              "#FCCD90");
+              "#ebecd0");
     }
   };
 
